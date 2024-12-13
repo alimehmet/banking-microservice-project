@@ -3,6 +3,7 @@ package com.bankingproject.microservice.controller;
 import com.bankingproject.microservice.model.User;
 import com.bankingproject.microservice.service.UserService;
 import org.springframework.web.bind.annotation.*;
+import com.bankingproject.microservice.dto.UserDTO;
 
 import java.util.List;
 
@@ -22,7 +23,7 @@ public class UserController {
     }
 
     @GetMapping
-    public List<User> getAllUsers() {
-        return userService.getAllUsers(); 
+    public List<UserDTO> getAllUsers() {
+        return userService.getAllUsers();
     }
 }
